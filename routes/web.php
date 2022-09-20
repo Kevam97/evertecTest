@@ -18,6 +18,6 @@ use App\Http\Controllers\CustomerController;
 Route::get('/purchase', [OrderController::class, 'index'])->name('purchase');
 Route::get('/orders',[OrderController::class, 'showOrders'])->name('orders');
 Route::post('/addOrder', [OrderController::class, 'createOrder'])->name('create');
-Route::get('/customer', [CustomerController::class, 'index'])->name('customer.index');
+Route::get('/', [CustomerController::class, 'index'])->name('customer.index');
 Route::post('/getCustomer', [CustomerController::class, 'getCustomers'])->name('getCustomers');
 
